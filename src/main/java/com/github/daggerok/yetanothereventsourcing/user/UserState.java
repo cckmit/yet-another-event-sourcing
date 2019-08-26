@@ -86,7 +86,7 @@ public class UserState implements State {
         return this;
     }
 
-    /* friend */
+    /* invite */
 
     public UserState on(UserInvited event) {
         friendRequests.add(event.getUserId());

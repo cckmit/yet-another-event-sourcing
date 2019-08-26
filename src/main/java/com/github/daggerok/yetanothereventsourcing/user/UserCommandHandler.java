@@ -58,23 +58,23 @@ public class UserCommandHandler implements CommandHandler {
         return update(command.getAggregateId(), UserAggregate::reactivateUser);
     }
 
-    /* friend */
+    /* invite */
 
     public Void handle(InviteUser command) {
         return update(command.getAggregateId(),
-                      userAggregate -> userAggregate.sendFriendRequest(command.getUserId(),
-                                                                       command.getMessage()));
+                      userAggregate -> userAggregate.inviteUser(command.getUserId(),
+                                                                command.getMessage()));
     }
 
     public Void handle(DeclineInvite command) {
         return update(command.getAggregateId(),
-                      userAggregate -> userAggregate.declineFriendRequest(command.getRequesterId(),
-                                                                          command.getReason()));
+                      userAggregate -> userAggregate.declineInvite(command.getRequesterId(),
+                                                                   command.getReason()));
     }
 
     public Void handle(AcceptInvite command) {
         return update(command.getAggregateId(),
-                      userAggregate -> userAggregate.acceptFriendRequest(command.getRequesterId()));
+                      userAggregate -> userAggregate.acceptInvite(command.getRequesterId()));
     }
 
     /* message */

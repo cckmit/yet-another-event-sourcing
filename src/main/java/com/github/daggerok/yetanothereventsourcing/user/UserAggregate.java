@@ -80,9 +80,9 @@ public class UserAggregate implements Aggregate {
         apply(new UserReactivated(state.getAggregateId()));
     }
 
-    /* friend commands */
+    /* invite commands */
 
-    public void sendFriendRequest(UUID friendId, String message) {
+    public void inviteUser(UUID friendId, String message) {
         Objects.requireNonNull(friendId);
         Objects.requireNonNull(message);
 
@@ -93,14 +93,14 @@ public class UserAggregate implements Aggregate {
         apply(new UserInvited(state.getAggregateId(), friendId, message));
     }
 
-    public void declineFriendRequest(UUID friendId, String reason) {
+    public void declineInvite(UUID friendId, String reason) {
         Objects.requireNonNull(friendId);
         Objects.requireNonNull(reason);
         requireKnownUser();
         apply(new InviteDeclined(state.getAggregateId(), friendId, reason));
     }
 
-    public void acceptFriendRequest(UUID friendId) {
+    public void acceptInvite(UUID friendId) {
         Objects.requireNonNull(friendId);
         requireKnownUser();
         apply(new InviteAccepted(state.getAggregateId(), friendId));
