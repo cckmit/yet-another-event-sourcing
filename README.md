@@ -1,4 +1,4 @@
-# Yet another EventSourced CQRS DDD app
+# Yet another EventSourced CQRS DDD app [![Build Status](https://travis-ci.org/daggerok/yet-another-event-sourcing.svg?branch=master)](https://travis-ci.org/daggerok/yet-another-event-sourcing)
 
 links:
 
