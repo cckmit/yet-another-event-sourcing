@@ -1,0 +1,15 @@
+POST http://127.0.0.1:8080/user
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "ololo",
+  "id": "00000000-0000-0000-0000-000000000000"
+}
+
+###
+GET http://127.0.0.1:8080/user/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+Accept: application/json
+
+###
