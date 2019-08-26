@@ -48,8 +48,7 @@ public class UserHandlers {
                       .map(cmd -> LinkedHashMap.of("result", String.format("user created: %s", cmd.getAggregateId().toString()),
                                                    "aggregateId", cmd.getAggregateId().toString())
                                                .toJavaMap())
-                      .flatMap(map -> ServerResponse.created(
-                              URI.create(Hateoas.baseUrl(request, "/user", map.get("aggregateId"))))
+                      .flatMap(map -> ServerResponse.created(URI.create(Hateoas.baseUrl(request, "/user", map.get("aggregateId"))))
                                                     .contentType(MediaType.APPLICATION_JSON)
                                                     .body(Mono.just(map), Map.class));
     }
