@@ -13,3 +13,4 @@ Content-Type: application/json
 Accept: application/json
 
 ###
+GET http://127.0.0.1:8080/00000000-0000-0000-0000-000000000000
