@@ -2,7 +2,6 @@ package com.github.daggerok.yetanothereventsourcing.user;
 
 import com.github.daggerok.yetanothereventsourcing.db.InMemoryEventStore;
 import io.vavr.API;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.NotNull;
@@ -17,7 +16,6 @@ import static io.vavr.API.Case;
 import static io.vavr.Predicates.instanceOf;
 
 @Log4j2
-@Getter
 @Service
 @RequiredArgsConstructor
 public class UserCommandHandler implements CommandHandler {
