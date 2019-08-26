@@ -22,7 +22,8 @@ public class ResourcesConfig {
         return RouterFunctions.route()
                               .nest(path("/user"), userHandlers::routes)
                               .path("/**", this::fallbackRote)
-                              .build();
+                              .build()
+                              .andRoute(path("/**"), this::apiInfo);
     }
 
     private RouterFunction<ServerResponse> fallbackRote() {

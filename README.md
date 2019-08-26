@@ -2,6 +2,7 @@
 
 links:
 
+* [assertj completable futures testing](https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/CompletableFutureAssertionsExamples.java)
 * [useful habr article .NET](https://habr.com/ru/post/146429/)
 * [github repo .NET](https://github.com/AlexShkor/CQRS-Event-Sourcing-ASP-NET-MVC)
 
