@@ -70,7 +70,7 @@ public class UserAggregate implements Aggregate {
     public void suspendUser(String reason) {
         Objects.requireNonNull(reason);
         requireKnownUser();
-            requireStatus(UserStatus.ACTIVE);
+        requireStatus(UserStatus.ACTIVE);
         apply(new UserSuspended(state.getAggregateId(), reason));
     }
 
